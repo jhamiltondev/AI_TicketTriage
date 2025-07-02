@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ConnectWise Ticket Assigner Azure Function
 
 This Azure Function automatically scans the ConnectWise dispatch portal every 3 minutes and assigns unassigned tickets to available technicians based on workload balancing and priority rules.
@@ -182,3 +183,6 @@ For issues or questions:
 ## License
 
 This project is licensed under the MIT License. 
+=======
+# AI_TicketTriage
+>>>>>>> 2b789ddea71a9268a3d49aba4c3dbaee8980a0c8
