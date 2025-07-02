@@ -1,0 +1,12 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "CONNECTWISE_SITE": "https://api-na.myconnectwise.net",
+    "CONNECTWISE_COMPANY_ID": "buckeyeitser",
+    "CONNECTWISE_PUBLIC_KEY": "6btb8DTHkwheGf3d",
+    "CONNECTWISE_PRIVATE_KEY": "sKnSZdrNmU8zeFiQ",
+    "CONNECTWISE_CLIENT_ID": "173d3199-c79d-4219-88ba-96140f77942e"
+  }
+} 
