@@ -158,9 +158,11 @@ Write-Host "Function URL: $($functionUrl.invokeUrlTemplate)" -ForegroundColor Cy
 Write-Host ""
 Write-Host "📋 Next steps:" -ForegroundColor Yellow
 Write-Host "1. Update the TECH_ASSIGNMENT_RULES in the function code with your actual tech emails"
-Write-Host "2. Test the function using the test script: python test_function.py"
-Write-Host "3. Monitor the function in Azure Portal"
-Write-Host "4. Check Application Insights for logs and metrics"
+Write-Host "2. Configure VIP_TENANTS in config.py for VIP automation"
+Write-Host "3. Test the main function using: python test_function.py"
+Write-Host "4. Test the VIP automation using: python test_vip_automation.py"
+Write-Host "5. Monitor the functions in Azure Portal"
+Write-Host "6. Check Application Insights for logs and metrics"
 Write-Host ""
 Write-Host "🔗 Useful links:" -ForegroundColor Yellow
 Write-Host "- Azure Portal: https://portal.azure.com"

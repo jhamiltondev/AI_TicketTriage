@@ -191,4 +191,106 @@ NOTIFICATIONS = {
     "email_notifications": False,
     "teams_webhook_url": None,
     "slack_webhook_url": None
+}
+
+# VIP Automation Configuration
+VIP_TENANTS = [
+    "vip_client_1",
+    "vip_client_2", 
+    "premium_client",
+    "enterprise_client"
+]
+
+VIP_AUTOMATION_RULES = {
+    "password_reset": {
+        "keywords": [
+            "password reset", "forgot password", "locked out", "password expired",
+            "can't login", "login issue", "account locked", "reset password"
+        ],
+        "auto_resolve": True,
+        "priority_threshold": "Priority 3 - Medium",
+        "require_confirmation": False
+    },
+    "account_creation": {
+        "keywords": [
+            "new user", "create account", "new employee", "account setup",
+            "user creation", "new hire", "employee onboarding", "setup account"
+        ],
+        "auto_resolve": False,
+        "priority_threshold": "Priority 2 - High",
+        "require_confirmation": True
+    },
+    "account_disable": {
+        "keywords": [
+            "disable account", "terminate user", "remove access", "account deactivation",
+            "user termination", "revoke access", "disable user", "employee termination"
+        ],
+        "auto_resolve": False,
+        "priority_threshold": "Priority 2 - High",
+        "require_confirmation": True
+    },
+    "email_forwarding": {
+        "keywords": [
+            "email forwarding", "forward emails", "email redirect", "mail forwarding",
+            "set up forwarding", "email alias"
+        ],
+        "auto_resolve": True,
+        "priority_threshold": "Priority 3 - Medium",
+        "require_confirmation": False
+    },
+    "shared_mailbox": {
+        "keywords": [
+            "shared mailbox", "shared email", "group mailbox", "department email",
+            "team mailbox", "shared inbox"
+        ],
+        "auto_resolve": False,
+        "priority_threshold": "Priority 2 - High",
+        "require_confirmation": True
+    }
+}
+
+# Password Policy for VIP Automation
+PASSWORD_POLICY = {
+    "length": 12,
+    "require_uppercase": True,
+    "require_lowercase": True,
+    "require_numbers": True,
+    "require_special": True,
+    "exclude_chars": "lI1O0",
+    "expiration_days": 90,
+    "history_count": 5
+}
+
+# Account Creation Templates
+ACCOUNT_CREATION_TEMPLATES = {
+    "default": {
+        "groups": ["Domain Users"],
+        "home_directory": "\\\\server\\users\\{username}",
+        "profile_path": "\\\\server\\profiles\\{username}",
+        "mailbox_size_limit": "2GB",
+        "password_expires": True
+    },
+    "executive": {
+        "groups": ["Domain Users", "Executives"],
+        "home_directory": "\\\\server\\executives\\{username}",
+        "profile_path": "\\\\server\\profiles\\executives\\{username}",
+        "mailbox_size_limit": "5GB",
+        "password_expires": True
+    },
+    "department_head": {
+        "groups": ["Domain Users", "Department Heads"],
+        "home_directory": "\\\\server\\dept_heads\\{username}",
+        "profile_path": "\\\\server\\profiles\\dept_heads\\{username}",
+        "mailbox_size_limit": "3GB",
+        "password_expires": True
+    }
+}
+
+# VIP Automation Security Settings
+VIP_AUTOMATION_SECURITY = {
+    "max_daily_automations": 50,
+    "require_approval_for_sensitive_actions": True,
+    "sensitive_actions": ["account_disable", "account_creation"],
+    "audit_log_enabled": True,
+    "notification_on_sensitive_actions": True
 } 
