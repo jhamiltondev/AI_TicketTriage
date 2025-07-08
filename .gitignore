@@ -34,7 +34,7 @@ env.bak/
 venv.bak/
 
 # IDE
-.vscode/
+
 .idea/
 *.swp
 *.swo
@@ -55,3 +55,4 @@ logs/
 
 # Azure
 .azure/ 
+.python_packages
